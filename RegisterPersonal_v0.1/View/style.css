@@ -1,0 +1,263 @@
+@CHARSET "ISO-8859-1";
+
+/* *********************************************** */
+/* Layout style */
+/* *********************************************** */
+
+/*******************/
+/* General setting */
+/*******************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6,p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn,em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b,u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table,caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details,embed,figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,time, mark, audio, video{
+	margin			: 0;
+	padding			: 0;
+	border			: 0;
+	display			: block;
+	font-size		: 100%;
+	font			: inherit;
+	vertical-align	: baseline;  /* Default align */
+}
+
+body{
+	line-height		: 1;	/* Distance between lines */
+}
+ol, ul{
+	list-style		: none;	/* No marks in lists */
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active, a:hover{
+	outline: 0 none;	/*An outline is a line that is drawn around elements*/
+}
+
+/**************/
+/* Containers */
+/**************/
+
+#mainContainer{
+	width			: 100%;
+	min-width		: 1024px;
+	height			: 100%;
+	font-size		: inherit;
+}
+
+#topLayout{
+	width			: 100%;
+	min-width		: 1024px;
+	height			: 90px;
+	background-color: #3385FF;
+	text-align		: right;
+	vertical-align	: middle;
+}
+
+/*
+#centerLayout{
+	width			: 100%;
+	min-width		: 1024px;
+	height			: 500px;
+	background-color: #99CCFF;
+}*/
+
+#bottomLayout{
+	width			: 100%;
+	min-width		: 1024px;
+	height			: 80px;
+	background-color: #63A3FF;
+}
+
+#centerLeftLayout, #centerRightLayout, #topLayout, #bottomLayout{
+	display			: inline-block;
+	/*vertical-align: top;*/
+	font-size		: inherit;
+}
+
+#centerRightLayout{
+	width			: 25%;
+	height			: 500px;
+	float:			: left;
+	/* Style */
+	background-color: #99CCFF;
+}
+
+/**********************/
+/* Vertical Menu (div)*/
+/**********************/
+
+#centerLeftLayout {
+	background-color		: #0F0F0F;
+	background-image		: none;
+	background-repeat		: repeat;	/*Repeat image*/
+	background-attachment	: scroll;	/*The background scrolls along with the element. Default value*/
+	background-position		: 0 0;
+	/*For absolutely positioned elements, the bottom property sets the bottom edge of an element to a unit above/below its normal position*/
+	bottom			: 0;
+	top				: 0;
+	left			: 0;
+	margin-left		: 0;
+	/*The overflow property specifies what happens if content overflows an element's box*/
+	/*The overflow-y property specifies what to do with the top/bottom edges of the content - if it overflows the element's content area*/
+	overflow-y		: auto;	/*Should cause a scrolling mechanism to be provided for overflowing boxes*/
+	/*An element with a fixed position is positioned relative to the browser window, and will not move even if the window is scrolled:*/
+	position		: static;
+	/*Set the height and width of an element*/
+	width			: 160px;
+	/*The z-index property specifies the stack order of an elements (only works in positioned elements)*/
+	z-index			: 1000;
+	/*Allows to change property values smoothly from one value to another, to a given duration*/
+	transition		: all 0.2s ease-out 0s;
+}
+
+#centerLeftLayout a {
+	border-width	: medium;	/* Default value*/
+	border-style	: none;
+	color			: #090909;
+	padding			: 0.625em 1em;
+	white-space		: normal;
+}
+
+#centerLeftLayout .pure-menu ul {
+	background-color		: transparent;
+	background-image		: none;
+	background-repeat		: repeat;	/*Repeat image*/
+	background-attachment	: scroll;	/*The background scrolls along with the element. Default value*/
+	background-position		: 0 0;
+	border					: medium none;
+	display					: block;	
+}
+
+#centerLeftLayout .pure-menu ul, #centerLeftLayout .pure-menu {
+	border-top				: 1px solid #030303;
+}
+
+#centerLeftLayout .pure-menu li a:hover, #centerLeftLayout .pure-menu li a:focus {
+	background-color		: #333;
+	background-image		: none;
+	background-repeat		: repeat;	/*Repeat image*/
+	background-attachment	: scroll;	/*The background scrolls along with the element. Default value*/
+	background-position		: 0 0;
+	border					: medium none;
+}
+
+#centerLeftLayout .pure-menu-heading {
+	color					: #FFF;
+	font-size				: 125%;
+	font-weight				: 300;
+	letter-spacing			: 0.1em;
+	margin-top				: 0;
+	padding					: 0.5em 0.8em;
+	text-transform			: uppercase;
+}
+
+#centerLeftLayout .pure-menu-heading:hover, #centerLeftLayout .pure-menu-heading:focus {
+	color: #999;
+}
+
+/****************/
+/* Table Layout */
+/****************/
+
+.pure-table {
+	border			: 1px solid #CBCBCB;
+	border-collapse	: collapse;
+	border-spacing	: 0;
+	empty-cell		: show;
+}
+
+/* Table caption */
+.pure-table caption {
+	color			: #000000;
+	font			: italic 85%/1 arial,sans-serif;
+	padding			: 1em 0;
+	text-align		: center;
+}
+
+/*td: Standard cell*/
+/*th: Header cell*/
+.pure-table td, .pure-table th{
+	border-left		: 1px solid #CBCBCB;
+	border-width	: 0 0 0 1px;
+	font-size		: inherit;
+	margin			: 0;
+	overflow		: visible;
+	padding			: 0.5em 1em;
+}
+
+/*first-child: First child of its parent*/
+.pure-table td:first-child, .pure-table th:first-child{
+	border-left-width: 0;
+}
+
+/*thead: Header of HTML table*/
+.pure-table thead {
+	background-color	: #EEE;
+	color				: #000000;
+	text-align			: left;
+	vertical-align		: bottom;
+}
+
+.pure-table td {
+	background-color: transparent;
+}
+
+.pure-table-bordered td{
+	border-bottom: 1px solid #CBCBCB;
+}
+
+/*thead: Body of the HTML table*/
+.pure-table-bordered tbody > tr:last-child > td {
+	border-bottom: 1px solid #CBCBCB;;
+}
+
+/***************/
+/*Vertical menu*/
+/***************/
+
+.pure-menu-list, .pure-menu-item {
+	position: relative;
+}
+
+.pure-menu-list {
+	/*list-style	: outside none none;*/	/*Specify all the list properties in one declaration*/
+	list-style: none;
+	margin		: 0;
+	padding		: 0;
+}
+
+.pure-menu-item {
+	height		: 100%;
+	margin		: 0;
+	padding		: 0;
+}
+
+.pure-menu-link{
+	color		: #777;	
+}
+
+.pure-menu-link:hover {
+	background-color: transparent;
+}
+
+.pure-menu-link, .pure-menu-selected, .pure-menu-link:visited {
+	color		: #000000;
+}
+
+.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
+	background-color: #eee;
+}
+
+.pure-menu-link, .pure-menu-heading {
+	padding: 0.5em 1em;
+}
+
+.pure-menu-link, .pure-menu-heading {
+	display			: block;
+	text-decoration	: none;
+	white-space		: nowrap; /*Specifies how white-space inside an element is handled*/
+}
