@@ -23,8 +23,12 @@
 </div>
 <div id="centerRightLayout">
 	<form action="action_register.php" method="post">
-		Insert your code:<input type="text" name="code_user"/>
-		<input type="submit" value="Register" />
+		<fieldset>
+			<legend>Register your entrance</legend>
+			<label id="labelUserCode" for="textUserCode">Insert your code</label>
+			<input id="textUserCode" type="text" name="UserCode"/>
+			<input id="buttonUserCode" name="buttonUserCode" type="submit" value="Register" />
+		</fieldset>
 	</form>
 </div>
 </div>
