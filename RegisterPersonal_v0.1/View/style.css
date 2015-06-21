@@ -257,7 +257,7 @@ a:active, a:hover{
 	padding: 0.5em 1em;
 }
 
-.pure-menu-link, .pure-menu-heading {
+.pure-menu-link, .pure-menu-heading { 
 	display			: block;
 	text-decoration	: none;
 	white-space		: nowrap; /*Specifies how white-space inside an element is handled*/
