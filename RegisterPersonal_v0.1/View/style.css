@@ -257,10 +257,23 @@ a:active, a:hover{
 	padding: 0.5em 1em;
 }
 
-.pure-menu-link, .pure-menu-heading { 
+.pure-menu-link, .pure-menu-heading {
 	display			: block;
 	text-decoration	: none;
 	white-space		: nowrap; /*Specifies how white-space inside an element is handled*/
+}
+
+/* *********************************************** */
+/* Form style */
+/* *********************************************** */
+#formRegisterUser{
+	/* Size and position */
+	max-width		: 300px;
+	position		: relative;
+	padding:		: 20px 20px 20px;
+	margin-top		: 50px;
+	margin-left		: auto;
+	margin-right	: auto;
 }
 
 /* *********************************************** */
@@ -281,4 +294,28 @@ a:active, a:hover{
 	/* Font styles */
 	text-shadow		: 0 1px 0 rgba(0,0,0,0.3);
 	font-size		: 14px;
+}
+
+/* *********************************************** */
+/* Fieldset style */
+/* *********************************************** */
+#fieldsetRegisterUser{
+	/* Size and position */
+	padding			: 20px 5px 10px;
+	margin-left		: auto;
+	margin-right	: auto;
+	/* Style */
+	border			: 1px solid grey;
+}
+
+#legendRegisterUser{
+	/* Size and position */
+	padding			: 0.2em 0.2em 0.2em 0.2em;
+	margin-left		: 0 5px 0 0;
+	/* Style */
+	border			: 1px solid grey;
+	/* Font-style */
+	font-family		: arial;
+	font-size		: 16px;
+	font-weight		: bold;
 }
